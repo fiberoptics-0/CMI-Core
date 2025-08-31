@@ -15,6 +15,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id 'org.spongepowered.mixin' version '0.7.+'
+    id 'maven-publish'
 }
 
 apply plugin: 'org.spongepowered.mixin'
@@ -246,4 +247,26 @@ tasks.named('jarJar') {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "fiberoptics"
+            url = "https://maven.fiberoptics.dev/releases"
+            credentials(PasswordCredentials)
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+
+    publications {
+        maven(MavenPublication) {
+            groupId = "dev.fiberoptics"
+            artifactId = "cmi"
+            version = mod_version
+            from components.java
+        }
+    }
 }
