@@ -252,7 +252,7 @@ tasks.withType(JavaCompile).configureEach {
 publishing {
     repositories {
         maven {
-            name = "fiberopticsRepository"
+            name = "fiberoptics"
             url = "https://maven.fiberoptics.dev/releases"
             credentials(PasswordCredentials)
             authentication {
