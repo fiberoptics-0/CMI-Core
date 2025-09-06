@@ -168,7 +168,7 @@ dependencies {
     implementation fg.deobf("mekanism:Mekanism:${mekanism_version}")
     implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     implementation fg.deobf("curse.maven:create-328085:5838779")
-    compileOnly fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.20.1:0.6.11-13")
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.20.1:0.6.11-13")
     implementation fg.deobf("curse.maven:tinkers-construct-74072:6266282")
     implementation fg.deobf("curse.maven:immersive-engineering-231951:6206989")
     implementation fg.deobf("curse.maven:mantle-74924:6642332")

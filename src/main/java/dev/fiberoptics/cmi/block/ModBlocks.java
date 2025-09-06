@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ModBlocks {
-    private static final DeferredRegister<Block> BLOCKS;
+    public static final DeferredRegister<Block> BLOCKS;
 
     public static final RegistryObject<Block> GOLD_SAPLING;
     public static final RegistryObject<Block> WATER_PUMP;

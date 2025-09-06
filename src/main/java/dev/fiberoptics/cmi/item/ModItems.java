@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-    private static final DeferredRegister<Item> ITEMS;
+    public static final DeferredRegister<Item> ITEMS;
 
     public static final RegistryObject<Item> NUCLEAR_MECHANISM;
     public static final RegistryObject<Item> WATER_PUMP;
